@@ -2,11 +2,11 @@
   "expo": {
     "name": "cat-fact-app-rra",
     "slug": "cat-fact-app-rra",
-    "version": "1.0.0",
+    "version": "1.0.21",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/catFact-bk-icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/new-relic-logo-white.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,13 +17,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.galtekonline.catfact",
+      "buildNumber": "1.0.21"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.galtekonline.catfact",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -1,13 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import ScrollViewCats from './components/ScrollView';
+import FlatListCat from './components/FlatListCat';
+import CatDetails from './components/CatDetails';
+import Metrics from './components/Metrics';
+
+const { Navigator, Screen } = createStackNavigator();
+
+
+global.NETWORK_TIME_ACCUM = 0;
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <FlatListCat />
+    <NavigationContainer>
+      <Navigator>
+        
+        <Screen name="Home" component={FlatListCat} options={{ title: "Home" }} />
+        <Screen name="CatDetails" component={CatDetails} options={{ title: "Details" }}/>
+        <Screen name="Metrics" component={Metrics} options={{ title: "Metrics" }} />
+        
+      </Navigator>
+    </NavigationContainer>
   );
 }
 
