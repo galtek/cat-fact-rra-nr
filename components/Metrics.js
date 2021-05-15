@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // import DeviceInfo from 'react-native-device-info';
 // import { getApplicationName } from 'react-native-device-info';
+//TODO: create iOS and Android projects to run pod install in iOS root file and react link react-native-device-info in out root to update manifest and info for Android
 
 export default class Metrics extends Component {
     constructor(props){
@@ -84,8 +85,8 @@ export default class Metrics extends Component {
                 <View style={styles.headerContainer}>
                     <Text style={styles.headerTitle}>Metrics</Text>
                 </View>
-                <Text style={styles.networkDelayText}>Model: {this.state.loadDelay}ms</Text>
-                <Text style={styles.networkDelayText}>OS: {this.state.loadDelay}ms</Text>
+                {/* <Text style={styles.networkDelayText}>Model: {this.state.loadDelay}ms</Text>
+                <Text style={styles.networkDelayText}>OS: {this.state.loadDelay}ms</Text> */}
                 <Text style={styles.networkDelayText}>Load Delay: {this.state.loadDelay}ms</Text>
                 <Button
                     title="Check Mem"
